@@ -6,6 +6,8 @@ public struct Queue<T> {
   fileprivate var head = 0
   public var isEmpty: Bool { return count == 0 }
   public var count: Int { return array.count - head }
+  public init(_ array: [T]) { self.array = array }
+    public init() {}
   public mutating func enqueue(_ element: T) { array.append(element) }
   public mutating func dequeue() -> T? {
     guard let element = array[guarded: head] else { return nil }
