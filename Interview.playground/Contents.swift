@@ -24,5 +24,5 @@ let r5 = TreeNode(7)
 r1.left = r2; r1.right = r3; r2.right = r4; r3.right = r5
 
 print("blah")
-print(Solution78().subsets([1,2,3]))
+print(Solution39().combinationSum2([2,3,6,7], 7))
 print()
