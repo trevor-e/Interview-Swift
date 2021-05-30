@@ -20,3 +20,17 @@ Playgrounds can be very finnicky to get working. I've found it best to manually 
 
 ### Finding K largest elements
 - Use a min-heap (note: the opposite of what we're searching for) to store elements in a sorted order. Then remove elements from the heap until the size == k.
+
+### Math
+Exponents:
+- 2^0 = 1
+- 2^1 = 2
+- 2^-2 = 1/(2*2) = 1/4
+- 2^4 * 2^4 = 2^8
+
+## Recursion
+- Try to always use tail recursion otherwise it's easy to blow the stack on large inputs.
+- Be careful since it can be deceiving, eg: `return n*fact(n-1)` is not tail recursive because it's accumulating the result of `n` in each function call. You can rewrite the function to accumulate the result instead: `return fact(n-1, n*a)`
+
+## Big O
+- If the input is halving each time then it's probably O(log n)

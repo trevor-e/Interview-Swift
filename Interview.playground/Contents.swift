@@ -23,5 +23,6 @@ let r4 = TreeNode(4)
 let r5 = TreeNode(7)
 r1.left = r2; r1.right = r3; r2.right = r4; r3.right = r5
 
-print(Solution617().mergeTrees(l1, r1)?.printTree())
+print("blah")
+print(Solution78().subsets([1,2,3]))
 print()
