@@ -28,9 +28,15 @@ Exponents:
 - 2^-2 = 1/(2*2) = 1/4
 - 2^4 * 2^4 = 2^8
 
+Helpers:
+- 8.isMultiple(of: 2)
+
 ## Recursion
 - Try to always use tail recursion otherwise it's easy to blow the stack on large inputs.
 - Be careful since it can be deceiving, eg: `return n*fact(n-1)` is not tail recursive because it's accumulating the result of `n` in each function call. You can rewrite the function to accumulate the result instead: `return fact(n-1, n*a)`
 
 ## Big O
 - If the input is halving each time then it's probably O(log n)
+
+## Backtracking
+Technique for solving recursive solutions by building the result incrementally. Recursive steps are eliminated if they fail to satisfy the constraints of the problem at any time, allowing you to speed up execution.
