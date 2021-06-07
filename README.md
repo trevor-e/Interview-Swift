@@ -13,7 +13,11 @@ Playgrounds can be very finnicky to get working. I've found it best to manually 
 - Some solutions can be made with in-order traversal since you're reading the nodes in a natural way.
 
 ### Graphs
-- Try to mark nodes as visited to make searching easier.
+- Use a map/set to keep track of visited nodes while searching.
+
+### Linked Lists
+- Be able to find the middle of a list using slow/fast pointers.
+- Be able to reverse a linked list.
 
 ### Word Transformations
 - Try to precomute word neighbors using a placeholder (eg "*") in a dictionary with the value pointing back to the original word.
@@ -36,7 +40,8 @@ Helpers:
 - Be careful since it can be deceiving, eg: `return n*fact(n-1)` is not tail recursive because it's accumulating the result of `n` in each function call. You can rewrite the function to accumulate the result instead: `return fact(n-1, n*a)`
 
 ## Big O
-- If the input is halving each time then it's probably O(log n)
+- If the input is halving each time then it's probably O(log n).
+- Be careful of binary trees and mistakenly assuming O(n^2) complexity for something that's actually O(2^n), eg: the naive recursive solution for fibonacci numbers.
 
 ## Backtracking
 Technique for solving recursive solutions by building the result incrementally. Recursive steps are eliminated if they fail to satisfy the constraints of the problem at any time, allowing you to speed up execution.

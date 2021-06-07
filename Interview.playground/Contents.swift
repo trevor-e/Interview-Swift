@@ -10,19 +10,6 @@ import UIKit
 //let l5 = ListNode(5)
 //l4.next = l5
 
-let l1 = TreeNode(1)
-let l2 = TreeNode(3)
-let l3 = TreeNode(2)
-let l4 = TreeNode(5)
-l1.left = l2; l1.right = l3; l2.left = l4
+let tree: TreeNode = [1,2,3,4,5,6,6,6,6,6]
 
-let r1 = TreeNode(2)
-let r2 = TreeNode(1)
-let r3 = TreeNode(3)
-let r4 = TreeNode(4)
-let r5 = TreeNode(7)
-r1.left = r2; r1.right = r3; r2.right = r4; r3.right = r5
-
-print("blah")
-print(Solution329().isSubsequence("axc", "ahbgdc"))
-print()
+print(Solution721().accountsMerge([["John","johnsmith@mail.com","john_newyork@mail.com"],["John","johnsmith@mail.com","john00@mail.com"],["Mary","mary@mail.com"],["John","johnnybravo@mail.com"]]))
