@@ -11,5 +11,5 @@ import UIKit
 //l4.next = l5
 
 let tree: TreeNode = [1,2,3,4,5,6,6,6,6,6]
-
-print(Solution721().accountsMerge([["John","johnsmith@mail.com","john_newyork@mail.com"],["John","johnsmith@mail.com","john00@mail.com"],["Mary","mary@mail.com"],["John","johnnybravo@mail.com"]]))
+var array = [1,1,2,3,3,4]
+print(Solution953().isAlienSorted(["hello","hello"], "abcdefghijklmnopqrstuvwxyz"))
