@@ -12,4 +12,5 @@ import UIKit
 
 let tree: TreeNode = [1,2,3,4,5,6,6,6,6,6]
 var array = [1,1,2,3,3,4]
-print(Solution953().isAlienSorted(["hello","hello"], "abcdefghijklmnopqrstuvwxyz"))
+let matrix = TestMatrix()
+print(Solution1428().leftMostColumnWithOne(matrix))

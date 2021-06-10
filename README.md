@@ -12,6 +12,26 @@ Playgrounds can be very finnicky to get working. I've found it best to manually 
 - For level-order traversal, use a Queue to store each level. You can either use an array to store each of the children as you enequeue them, or you can store the current count to know how many elements to dequeue.
 - Some solutions can be made with in-order traversal since you're reading the nodes in a natural way.
 
+### Binary Search
+- Binary search can be used in a lot of applications. If the problem mentions the input is sorted then consider using this.
+- In a more abstract sense it can also be used in min/max problems when converging on a solution.
+- Be careful on even size inputs since there are two middles.
+    - When the search space eventually becomes only two elements, they are represented by hi/low.
+    - Should generally pick the lower-middle via `mid = (low + high) / 2`.
+
+```
+let low = blah.startIndex
+let high = blah.endIndex
+while low < high {
+    let mid = (low + high) / 2
+    if solutionIsTooHigh(mid) {
+        low = blah.index(after: mid)
+    } else {
+        high = mid
+    }
+}
+```
+
 ### Graphs
 - Use a map/set to keep track of visited nodes while searching.
 
