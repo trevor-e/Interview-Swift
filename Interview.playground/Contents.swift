@@ -11,6 +11,6 @@ import UIKit
 //l4.next = l5
 
 let tree: TreeNode = [1,2,3,4,5,6,6,6,6,6]
-var array = [1,1,2,3,3,4]
+var array = [[1,2,3],[4,5,6],[7,8,9]]
 let matrix = TestMatrix()
-print(Solution1428().leftMostColumnWithOne(matrix))
+print(Solution1423().maxScore([1,79,80,1,1,1,200,1], 3))
