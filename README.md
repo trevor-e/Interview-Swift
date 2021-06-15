@@ -6,6 +6,15 @@ Some data structures borrowed from [Swift Algorithms Club](https://github.com/ra
 ## Running
 Playgrounds can be very finnicky to get working. I've found it best to manually save the solution file before running the Playground with test data. If you need to reference a helper file, autocomplete likely won't work and it will give warnings/errors that can be ignored. Despite its flaws, this workflow is still way faster than writing/submitting in the Leetcode editor. Don't forget to try some of these by hand on a piece of paper too!
 
+## Data Structures
+- **Min/Max Heap (Priority Queue):** efficiently store the min/max value of a sequence. 
+- **Deque:** a double-ended queue that allows for efficient access and removal on both ends.
+- **Trees:** allows for an n-ary relationship of parent nodes to children nodes.
+    - **Binary Search Tree:**: allows for efficient sorted storage of a sequence.
+- **Stack:** FILO access of items.
+- **Queue:** FIFO access of items.
+- **Graphs:** undirected or directed network of nodes.
+
 ## Tips
 
 ### Binary Trees
@@ -65,3 +74,12 @@ Helpers:
 
 ## Backtracking
 Technique for solving recursive solutions by building the result incrementally. Recursive steps are eliminated if they fail to satisfy the constraints of the problem at any time, allowing you to speed up execution.
+
+## Prefix Sum
+For a lot of questions involving contiguous arrays (or subarrays) you can precompute the sums in another array such that `prefixSum[i] = arr[0] + arr[1] + arr[i]`.  Eg:
+```
+let array = [10, 20, 10, 5, 15]
+let prefixSum = [0, 10, 30, 40, 45, 60] // Pad with a zero for convenience
+```
+Using this, if you ever need to calculate the sum of some range `i` to `j`, it becomes `prefixSum(j) - prefixSum(i)`. Eg:
+the sum of 1-3 would be 
