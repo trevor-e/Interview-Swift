@@ -10,8 +10,9 @@ Playgrounds can be very finnicky to get working. I've found it best to manually 
 - **Min/Max Heap (Priority Queue):** efficiently store the min/max value of a sequence. 
 - **Deque:** a double-ended queue that allows for efficient access and removal on both ends.
 - **Trees:** allows for an n-ary relationship of parent nodes to children nodes.
-    - **Binary Search Tree:**: allows for efficient sorted storage of a sequence.
+    - **Binary Search Tree:** allows for efficient sorted storage of a sequence.
 - **Stack:** FILO access of items.
+    - **Monotonic Stack:** items are either increasing or decreasing. Has the best time complexity solution O(N) for range queries in an array.
 - **Queue:** FIFO access of items.
 - **Graphs:** undirected or directed network of nodes.
 
@@ -83,3 +84,8 @@ let prefixSum = [0, 10, 30, 40, 45, 60] // Pad with a zero for convenience
 ```
 Using this, if you ever need to calculate the sum of some range `i` to `j`, it becomes `prefixSum(j) - prefixSum(i)`. Eg:
 the sum of 1-3 would be 
+
+## Sliding Window
+Allows you to efficiently compute a solution over a range of values, that might otherwise require a nested for-loop. Eg: finding the maximum sum of k consecutive elements in an array you can add/remove elements to the window.
+
+Hints: if the problem mentions "consecutive" or the input array is sorted.

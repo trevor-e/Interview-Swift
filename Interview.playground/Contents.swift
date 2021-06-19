@@ -10,7 +10,4 @@ import UIKit
 //let l5 = ListNode(5)
 //l4.next = l5
 
-let tree: TreeNode = [1,2,3,4,5,6,6,6,6,6]
-var array = [[1,2,3],[4,5,6],[7,8,9]]
-let matrix = TestMatrix()
-print(Solution1423().maxScore([1,79,80,1,1,1,200,1], 3))
+print(Solution1499().findMaxValueOfEquation([[0,0],[3,0],[9,2]], 3))
