@@ -6,7 +6,7 @@ import Foundation
 public class Solution1499 {
     public init() {}
     public func findMaxValueOfEquation(_ points: [[Int]], _ k: Int) -> Int {
-        var deque = Deque<(Int, Int)>() // A deque of point indexes
+        var deque = Deque<(Int, Int)>()
         var result = Int.min
         
         for point in points {

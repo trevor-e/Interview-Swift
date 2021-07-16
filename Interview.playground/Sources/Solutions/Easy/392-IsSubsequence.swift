@@ -1,7 +1,7 @@
 import Foundation
 
 // Top 100% :D
-public class Solution329 {
+public class Solution392 {
     public init() {}
     public func isSubsequence(_ sub: String, _ string: String) -> Bool {
         guard !sub.isEmpty else { return true }

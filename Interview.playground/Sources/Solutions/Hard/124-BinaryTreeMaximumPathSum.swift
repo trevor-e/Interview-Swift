@@ -4,7 +4,7 @@ public class Solution124 {
     private var maxSum = Int.min
     public init() {}
     public func maxPathSum(_ root: TreeNode?) -> Int {
-        maxGain(root)
+        _ = maxGain(root)
         return maxSum
     }
     private func maxGain(_ node: TreeNode?) -> Int {
