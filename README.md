@@ -16,16 +16,21 @@ You should be comfortable using the following data structures:
     - **Binary Search Tree:** allows for efficient storage of a sorted sequence.
 - **Graphs:** undirected or directed network of nodes. Be sure to know the different ways they can be represented (pointers, adjacency list).
 
-## Tips
+## Problem Solving
+Most questions are designed in a way that shouldn't require an excessive amount of coding. If you find yourself writing a lot of code then something might be going wrong.
 
-### Binary Trees
-- For level-order traversal, use a Queue to store each level. You can either use an array to store each of the children as you enequeue them, or you can store the current count to know how many elements to dequeue.
-- Some solutions can be made with in-order traversal since you're reading the nodes in a natural way.
+### Backtracking
+Technique for solving recursive solutions by building the result incrementally. Recursive steps are eliminated if they fail to satisfy the constraints of the problem at any time, allowing you to speed up execution. Eg: in the max island size problem you can return early if you've gone outside the grid bounds or if you've already visited an island square.
+
+### Sliding Window
+Allows you to efficiently compute a solution over a range of values, that might otherwise require a nested for-loop. Eg: finding the maximum sum of k consecutive elements in an array you can add/remove elements to the window.
+
+Hints: if the problem mentions "consecutive" or the input array is sorted.
 
 ### Binary Search
-- Binary search can be used in a lot of applications. If the problem mentions the input is sorted then consider using this.
-- In a more abstract sense it can also be used in min/max problems when converging on a solution.
-- Be careful on even size inputs since there are two middles.
+Binary search can be used in a lot of applications. If the problem mentions the input is sorted then consider using this. In a more abstract sense it can also be used in min/max problems when converging on a solution.
+
+Be careful on even size inputs since there are two middles:
     - When the search space eventually becomes only two elements, they are represented by hi/low.
     - Should generally pick the lower-middle via `mid = (low + high) / 2`.
 
@@ -41,6 +46,18 @@ while low < high {
     }
 }
 ```
+
+### Recursion
+- Tree questions generally have an elegant recursive solution.
+- All recursion can be represented imperatively although it's not always a trivial conversion (eg: using a Stack).
+- Try to always use tail recursion otherwise it's easy to blow the stack on large inputs.
+- Be careful since it can be deceiving, eg: `return n*fact(n-1)` is not tail recursive because it's accumulating the result of `n` in each function call. You can rewrite the function to accumulate the result instead: `return fact(n-1, n*a)`
+
+## Other Tips
+
+### Binary Trees
+- For level-order traversal, use a Queue to store each level. You can either use an array to store each of the children as you enequeue them, or you can store the current count to know how many elements to dequeue.
+- Some solutions can be made with in-order traversal since you're reading the nodes in a natural way.
 
 ### Graphs
 - Use a map/set to keep track of visited nodes while searching.
@@ -62,16 +79,9 @@ Exponents:
 Helpers:
 - 8.isMultiple(of: 2)
 
-### Recursion
-- Try to always use tail recursion otherwise it's easy to blow the stack on large inputs.
-- Be careful since it can be deceiving, eg: `return n*fact(n-1)` is not tail recursive because it's accumulating the result of `n` in each function call. You can rewrite the function to accumulate the result instead: `return fact(n-1, n*a)`
-
 ### Big O
 - If the input is halving each time then it's probably O(log n).
 - Be careful of binary trees and mistakenly assuming O(n^2) complexity for something that's actually O(2^n), eg: the naive recursive solution for fibonacci numbers.
-
-### Backtracking
-Technique for solving recursive solutions by building the result incrementally. Recursive steps are eliminated if they fail to satisfy the constraints of the problem at any time, allowing you to speed up execution.
 
 ### Prefix Sum
 For a lot of questions involving contiguous arrays (or subarrays) you can precompute the sums in another array such that `prefixSum[i] = arr[0] + arr[1] + arr[i]`.  Eg:
@@ -81,8 +91,3 @@ let prefixSum = [0, 10, 30, 40, 45, 60] // Pad with a zero for convenience
 ```
 Using this, if you ever need to calculate the sum of some range `i` to `j`, it becomes `prefixSum(j) - prefixSum(i)`. Eg:
 the sum of 1-3 would be 
-
-### Sliding Window
-Allows you to efficiently compute a solution over a range of values, that might otherwise require a nested for-loop. Eg: finding the maximum sum of k consecutive elements in an array you can add/remove elements to the window.
-
-Hints: if the problem mentions "consecutive" or the input array is sorted.
